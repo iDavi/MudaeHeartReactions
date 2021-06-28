@@ -5,7 +5,10 @@ http.createServer().listen(8080); //for uptime robots ping
 //config
 const claim = "React with any emoji to claim!";
 const emojis = ["💖", "💞", "💘", "💗"];
+const token = process.env.DISCORDTOKEN;
 //-----
+
+client.login(token);
 
 client.on("message", (msg) => {
   try {
