@@ -1,10 +1,14 @@
 const http = require("http");
 const Discord = require("discord.js");
 const client = new Discord.Client();
-http.createServer().listen(8080); //for uptime robots ping
+http
+  .createServer((req, res) => {
+    res.end("pong");
+  })
+  .listen(8080); //for uptime robots ping
 
 //config
-const claim = "React with any emoji to claim!";
+const claim = "Reaja com";
 const emojis = ["💖", "💞", "💘", "💗"];
 const token = process.env.DISCORDTOKEN;
 //-----
