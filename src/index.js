@@ -1,5 +1,6 @@
 const http = require("http");
-const client = new require("discord.js").Client();
+const Discord = require("discord.js");
+const client = Discord.Client();
 http.createServer().listen(8080); //for uptime robots ping
 
 //config
